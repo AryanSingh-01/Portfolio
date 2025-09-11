@@ -1,2 +1,2 @@
 # Portfolio
-My personal portfolio built with HTML, CSS, and JavaScript.
+🚧 Work in Progress – This is my new portfolio, currently being developed.
