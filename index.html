@@ -3,66 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aryan Singh — Portfolio</title>
 
-    <!-- Favicon -->
-<link rel="icon" type="image/png" sizes="16x16" href="image/icon/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="image/icon/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="image/icon/android-chrome-512x512.png">
-<link rel="apple-touch-icon" sizes="180x180" href="image/icon/apple-touch-icon.png">
-<link rel="shortcut icon" href="image/icon/favicon.ico">
-<link rel="manifest" href="image/icon/site.webmanifest">
-  <title>Aryan Singh – Portfolio (In Progress)</title>
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-    }
-    .card {
-      text-align: center;
-      padding: 2rem 2.5rem;
-      border-radius: 1rem;
-      background: rgba(15, 23, 42, 0.9);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-      max-width: 420px;
-    }
-    h1 {
-      margin-bottom: 0.5rem;
-      font-size: 1.6rem;
-    }
-    p {
-      margin-top: 0.25rem;
-      line-height: 1.6;
-      font-size: 0.98rem;
-    }
-    .badge {
-      display: inline-block;
-      margin-bottom: 1rem;
-      padding: 0.2rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid #38bdf8;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #38bdf8;
-    }
-  </style>
-  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="image/icon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="image/icon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="image/icon/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="image/icon/apple-touch-icon.png">
+  <link rel="shortcut icon" href="image/icon/favicon.ico">
+  <link rel="manifest" href="image/icon/site.webmanifest">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="card">
-    <div class="badge">In Progress</div>
-    <h1>Aryan Singh</h1>
-    <p>Personal portfolio is under construction.</p>
-    <p>Over the next few months, I’ll be adding my Linux, DevOps and security projects here.</p>
+
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="avatar"><img src="avatar.jpg" alt="Aryan Singh"></div>
+        <div>
+          <h6>Aryan Singh</h6>
+          <p>DevOps • Linux • Cloud</p>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#videos">Videos</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="cta">
+        <a class="btn" href="#">Download Resume</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+
+      <section id="home" class="hero">
+        <div class="hero-left">
+          <h1>DevOps Engineer — Linux & Cloud</h1>
+          <p class="lead">I build CI/CD pipelines, infrastructure as code, and production-level cloud setups.</p>
+
+          <div class="stats">
+            <div class="stat"><strong>100+</strong><small>Deploys</small></div>
+            <div class="stat"><strong>6</strong><small>Years Experience</small></div>
+            <div class="stat"><strong>3</strong><small>Certifications</small></div>
+          </div>
+        </div>
+
+        <aside class="hero-right">
+          <h4>Get in touch</h4>
+          <p>Email: you@example.com</p>
+          <p>GitHub: github.com/yourname</p>
+        </aside>
+      </section>
+
+      <section id="projects" class="projects">
+        <!-- Example Project Card -->
+        <article class="project">
+          <img src="projects/project1-thumb.jpg" alt="Project 1">
+          <div class="meta">
+            <div class="tags">
+              <span class="tag">Terraform</span>
+              <span class="tag">AWS</span>
+            </div>
+            <h3>Auto-Scaling Pipeline</h3>
+            <a class="external" href="#" target="_blank">View Repo ↗</a>
+          </div>
+        </article>
+      </section>
+
+    </main>
+
   </div>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
 </body>
 </html>
-
-
