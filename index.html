@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aryan Singh — Portfolio</title>
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="16x16" href="image/icon/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
@@ -18,25 +19,24 @@
 </head>
 
 <body>
-
   <div class="layout">
 
     <!-- Sidebar -->
-    <aside class="sidebar">
+    <aside class="sidebar" aria-label="Primary">
       <div class="brand">
         <div class="avatar"><img src="image/profilePic.jpg" alt="Aryan Singh"></div>
-        <div>
+        <div style="margin-top: 1rem;">
           <h6>Aryan Singh</h6>
           <p>DevOps • Linux • Cloud</p>
         </div>
       </div>
 
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#videos">Videos</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+      <nav role="navigation" aria-label="Primary navigation">
+        <a href="#home" data-target="home" class="nav-link" aria-current="page">Home</a>
+        <a href="#projects" data-target="projects" class="nav-link">Projects</a>
+        <a href="#videos" data-target="videos" class="nav-link">Videos</a>
+        <a href="#about" data-target="about" class="nav-link">About</a>
+        <a href="#contact" data-target="contact" class="nav-link">Contact</a>
       </nav>
 
       <div class="cta">
@@ -45,42 +45,62 @@
     </aside>
 
     <!-- Main Content -->
-    <main>
-
-      <section id="home" class="hero">
-        <div class="hero-left">
-          <h1>DevOps Engineer — Linux & Cloud</h1>
+    <main id="main-content" tabindex="-1">
+      <!-- Panels - each panel covers whole viewport vertically -->
+      <section id="home" class="panel active" role="region" aria-labelledby="home-title">
+        <div class="panel-inner">
+          <h1 id="home-title">DevOps Engineer — Linux & Cloud</h1>
           <p class="lead">I build CI/CD pipelines, infrastructure as code, and production-level cloud setups.</p>
 
-          <div class="stats">
+          <div class="stats" aria-hidden="true">
             <div class="stat"><strong>100+</strong><small>Deploys</small></div>
             <div class="stat"><strong>6</strong><small>Years Experience</small></div>
             <div class="stat"><strong>3</strong><small>Certifications</small></div>
           </div>
         </div>
-
-        <aside class="hero-right">
-          <h4>Get in touch</h4>
-          <p>Email: you@example.com</p>
-          <p>GitHub: github.com/yourname</p>
-        </aside>
       </section>
 
-      <section id="projects" class="projects">
-        <!-- Example Project Card -->
-        <article class="project">
-          <img src="projects/project1-thumb.jpg" alt="Project 1">
-          <div class="meta">
-            <div class="tags">
-              <span class="tag">Terraform</span>
-              <span class="tag">AWS</span>
-            </div>
-            <h3>Auto-Scaling Pipeline</h3>
-            <a class="external" href="#" target="_blank">View Repo ↗</a>
+      <section id="projects" class="panel" role="region" aria-labelledby="projects-title">
+        <div class="panel-inner">
+          <h2 id="projects-title">Projects</h2>
+          <div class="projects-grid">
+            <article class="project">
+              <img src="projects/project1-thumb.jpg" alt="Project 1 screenshot">
+              <div class="meta">
+                <div class="tags">
+                  <span class="tag">Terraform</span>
+                  <span class="tag">AWS</span>
+                </div>
+                <h3>Auto-Scaling Pipeline</h3>
+                <a class="external" href="#" target="_blank" rel="noopener">View Repo ↗</a>
+              </div>
+            </article>
+
+            <!-- add more project cards as needed -->
           </div>
-        </article>
+        </div>
       </section>
 
+      <section id="videos" class="panel" role="region" aria-labelledby="videos-title">
+        <div class="panel-inner">
+          <h2 id="videos-title">Videos</h2>
+          <p>Video walkthroughs, demos and tutorials.</p>
+        </div>
+      </section>
+
+      <section id="about" class="panel" role="region" aria-labelledby="about-title">
+        <div class="panel-inner">
+          <h2 id="about-title">About</h2>
+          <p>Short bio and career summary. Add links to certs, experience, and more.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="panel" role="region" aria-labelledby="contact-title">
+        <div class="panel-inner">
+          <h2 id="contact-title">Contact</h2>
+          <p>Email: you@example.com</p>
+        </div>
+      </section>
     </main>
 
   </div>
@@ -89,6 +109,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
