@@ -349,3 +349,11 @@ h1, h2 {
     display: none;
   }
 }
+
+/* Stack stats vertically on very small screens */
+@media (max-width: 500px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+
