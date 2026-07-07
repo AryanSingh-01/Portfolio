@@ -1,144 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aryan Singh — Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aryan Singh is a Cloud and DevOps-focused Software Engineer building CI/CD pipelines, cloud-native systems, and enterprise application workflows."
+    />
+    <title>Aryan Singh | Cloud & DevOps Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="Aryan Singh home">
+          <span class="brand-mark">AS</span>
+          <span>Aryan Singh</span>
+        </a>
+        <nav class="nav-links">
+          <a href="#work">Work</a>
+          <a href="#projects">Projects</a>
+          <a href="#credentials">Credentials</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="16x16" href="image/icon/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="image/icon/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="image/icon/android-chrome-512x512.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="image/icon/apple-touch-icon.png">
-  <link rel="shortcut icon" href="image/icon/favicon.ico">
-  
-  <link rel="manifest" href="image/icon/site.webmanifest">
-
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<!-- Mobile Profile Header -->
-<div class="mobile-profile">
-  <img src="image/profilePic.jpg" alt="Aryan Singh">
-  <h6>Aryan Singh</h6>
-</div>
-
-<!-- Mobile Horizontal Nav -->
-<nav class="mobile-nav" aria-label="Mobile navigation">
-  <a href="#home" data-target="home" class="nav-link">Home</a>
-  <a href="#projects" data-target="projects" class="nav-link">Projects</a>
-  <a href="#Certificates" data-target="Certificates" class="nav-link">Certificates</a>
-  <a href="#about" data-target="about" class="nav-link">About</a>
-  <a href="#contact" data-target="contact" class="nav-link">Contact</a>
-</nav>
-
-  <div class="layout">
-
-    <!-- Sidebar -->
-    <aside class="sidebar" aria-label="Primary">
-      <div class="brand">
-        <div class="avatar"><img src="image/profilePic.jpg" alt="Aryan Singh"></div>
-        <div style="margin-top: 1rem;">
-          <h6>Aryan Singh</h6>
-          <p>DevOps • Linux • Cloud</p>
-        </div>
-      </div>
-
-      <nav role="navigation" aria-label="Primary navigation">
-        <a href="#home" data-target="home" class="nav-link" aria-current="page">Home</a>
-        <a href="#projects" data-target="projects" class="nav-link">Projects</a>
-        <a href="#Certificates" data-target="Certificates" class="nav-link">Certificates</a>
-        <a href="#about" data-target="about" class="nav-link">About</a>
-        <a href="#contact" data-target="contact" class="nav-link">Contact</a>
-      </nav>
-    </aside>
-
-    <!-- Main Content -->
-    <main id="main-content" tabindex="-1">
-      <!-- Panels - each panel covers whole viewport vertically -->
-      <section id="home" class="panel active" role="region" aria-labelledby="home-title">
-        <h1 id="home-title">Portfolio - In Progress</h1>
-          <p class="lead">I build CI/CD pipelines, infrastructure as code, and production-level cloud setups.</p>
-        <div class="panel-inner">
-          
-
-         <div class="home-grid">
-
-    <div class="info-card card1">...</div>
-
-    <div class="info-card card2">...</div>
-
-    <div class="info-card card3">...</div>
-
-    <div class="info-card card4">...</div>
-
-    <div class="hero-card">...</div>
-
-</div></div>
-      </section>
-
-      <section id="projects" class="panel" role="region" aria-labelledby="projects-title">
-        <div class="panel-inner">
-          <h2 id="projects-title">Projects</h2>
-          <div class="projects-grid">
-            <article class="project">
-              <img src="projects/project1-thumb.jpg" alt="Project 1 screenshot">
-              <div class="meta">
-                <div class="tags">
-                  <span class="tag">Terraform</span>
-                  <span class="tag">AWS</span>
-                </div>
-                <h3>Auto-Scaling Pipeline</h3>
-                <a class="external" href="#" target="_blank" rel="noopener">View Repo ↗</a>
-              </div>
-            </article>
-            <article class="project">
-              <img src="projects/project2-thumb.jpg" alt="Project 2 screenshot">
-              <div class="meta">
-                <div class="tags">
-                  <span class="tag">Terraform</span>
-                  <span class="tag">AWS</span>
-                </div>
-                <h3>Auto-Scaling Pipeline</h3>
-                <a class="external" href="#" target="_blank" rel="noopener">View Repo ↗</a>
-              </div>
-            </article>
-
-            <!-- add more project cards as needed -->
+      <main>
+        <section id="home" class="hero-section">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="status-dot"></span>
+              Software Engineer @ Tata Consultancy Services
+            </p>
+            <h1>Cloud & DevOps-focused Software Engineer.</h1>
+            <p class="hero-lede">
+              I build cloud-native applications, CI/CD pipelines, and practical
+              enterprise workflows with a focus on cloud operations,
+              automation, Linux systems, and deployment reliability.
+            </p>
+            <div class="hero-actions" aria-label="Aryan's links">
+              <a class="button primary" href="mailto:aryan1311002@gmail.com">
+                <span aria-hidden="true">@</span>
+                Email
+              </a>
+              <a
+                class="button"
+                href="https://github.com/AryanSingh-01/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span aria-hidden="true">GH</span>
+                GitHub
+              </a>
+              <a
+                class="button"
+                href="https://www.linkedin.com/in/aryan-singh-tech/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span aria-hidden="true">IN</span>
+                LinkedIn
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
 
-      <section id="Certificates" class="panel" role="region" aria-labelledby="Certificates-title">
-        <div class="panel-inner">
-          <h2 id="Certificates-title">Certificates</h2>
-          <p>Achievements and Certificates</p>
-        </div>
-      </section>
+          <div class="ops-panel" aria-label="Aryan's current focus">
+            <div class="panel-topline">
+              <span>Career Profile</span>
+              <span>live</span>
+            </div>
+            <div class="signal-grid">
+              <div>
+                <span class="signal-label">Experience</span>
+                <strong>1+ year</strong>
+              </div>
+              <div>
+                <span class="signal-label">Track</span>
+                <strong>Cloud Engineering</strong>
+              </div>
+              <div>
+                <span class="signal-label">Degree</span>
+                <strong>B.Tech IT, 2024</strong>
+              </div>
+              <div>
+                <span class="signal-label">Focus</span>
+                <strong>DevOps</strong>
+              </div>
+            </div>
+            <p class="learning-label">Core focus</p>
+            <div class="learning-strip">
+              <span>AWS</span>
+              <span>Terraform</span>
+              <span>Kubernetes</span>
+              <span>Linux</span>
+            </div>
+          </div>
+        </section>
 
-      <section id="about" class="panel" role="region" aria-labelledby="about-title">
-        <div class="panel-inner">
-          <h2 id="about-title">About</h2>
-          <p>Short bio and career summary. Add links to certs, experience, and more.</p>
-        </div>
-      </section>
+        <section class="section intro-section" aria-labelledby="about-title">
+          <div>
+            <p class="section-kicker">About</p>
+            <h2 id="about-title">Engineering range with a cloud direction.</h2>
+          </div>
+          <p class="section-copy">
+            I work across enterprise application lifecycle activities including
+            onboarding, documentation, CMDB updates, issue resolution, process
+            streamlining, and modernization support. Alongside this, I am
+            building deeper capability in AWS, CI/CD, infrastructure automation,
+            Linux systems, and monitoring.
+          </p>
+        </section>
 
-      <section id="contact" class="panel" role="region" aria-labelledby="contact-title">
-        <div class="panel-inner">
-          <h2 id="contact-title">Contact</h2>
-          <p>Email: you@example.com</p>
-        </div>
-      </section>
-    </main>
+        <section id="work" class="section work-section" aria-labelledby="work-title">
+          <div class="section-heading">
+            <p class="section-kicker">Experience</p>
+            <h2 id="work-title">Tata Consultancy Services</h2>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-marker"></div>
+            <div>
+              <div class="role-row">
+                <h3>Engineer - Cloud Application Development</h3>
+                <span>Current</span>
+              </div>
+              <p>
+                Supporting enterprise application management for a large client
+                environment, from onboarding and lifecycle data updates to
+                cross-team issue resolution and process improvement.
+              </p>
+              <ul class="compact-list">
+                <li>Enterprise application onboarding and lifecycle support</li>
+                <li>CMDB, Jira, Confluence, documentation, and stakeholder coordination</li>
+                <li>Modernization support, including Angular code update work</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-  </div>
+        <section id="projects" class="section" aria-labelledby="projects-title">
+          <div class="section-heading">
+            <p class="section-kicker">Projects</p>
+            <h2 id="projects-title">Cloud-native builds and applied software.</h2>
+          </div>
 
-  <!-- External JS -->
-  <script src="script.js"></script>
-</body>
+          <div class="project-grid">
+            <article class="project-card featured">
+              <div class="project-status">Flagship</div>
+              <h3>CloudNative CI/CD Platform</h3>
+              <p>
+                Automated deployment pipeline that containerizes a Flask app,
+                pushes images to AWS ECR, and deploys updates to EC2 through
+                GitHub Actions.
+              </p>
+              <div class="tag-row">
+                <span>AWS EC2</span>
+                <span>AWS ECR</span>
+                <span>Docker</span>
+                <span>GitHub Actions</span>
+                <span>Flask</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/AryanSingh-01/" target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+                <span>Live link pending</span>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-status in-progress">In Development</div>
+              <h3>CloudNative Observability System</h3>
+              <p>
+                Monitoring, logging, and alerting setup for cloud-native
+                services, focused on operational visibility and faster incident
+                response.
+              </p>
+              <div class="tag-row">
+                <span>AWS</span>
+                <span>Monitoring</span>
+                <span>Alerting</span>
+                <span>Logging</span>
+                <span>Docker</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/AryanSingh-01/" target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+                <span>In development</span>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-status archive">Earlier Project</div>
+              <h3>MindPath Harmony</h3>
+              <p>
+                Web and AI-oriented project built with frontend fundamentals,
+                Firebase, and Python, representing an earlier exploration into
+                applied software ideas.
+              </p>
+              <div class="tag-row">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Firebase</span>
+                <span>Python</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/AryanSingh-01/" target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+                <span>Demo link pending</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="credentials" class="section credentials-section" aria-labelledby="credentials-title">
+          <div class="section-heading">
+            <p class="section-kicker">Credentials</p>
+            <h2 id="credentials-title">Certifications and recognition.</h2>
+          </div>
+          <div class="credential-layout two-column">
+            <div class="credential-block">
+              <h3>Certifications</h3>
+              <div class="credential-list">
+                <div class="credential-item">
+                  <div>
+                    <strong>Oracle Cloud Infrastructure Foundations Associate</strong>
+                    <span>Date pending</span>
+                  </div>
+                  <span class="credential-link pending">Link pending</span>
+                </div>
+                <div class="credential-item">
+                  <div>
+                    <strong>Oracle Cloud Data Management Foundations Associate</strong>
+                    <span>Date pending</span>
+                  </div>
+                  <span class="credential-link pending">Link pending</span>
+                </div>
+                <div class="credential-item">
+                  <div>
+                    <strong>Cisco Cloud Security</strong>
+                    <span>Date pending</span>
+                  </div>
+                  <span class="credential-link pending">Link pending</span>
+                </div>
+                <div class="credential-item">
+                  <div>
+                    <strong>AWS Cloud Practitioner Essentials</strong>
+                    <span>Date pending</span>
+                  </div>
+                  <span class="credential-link pending">Link pending</span>
+                </div>
+              </div>
+            </div>
+            <div class="credential-block">
+              <h3>Recognition</h3>
+              <div class="credential-list">
+                <div class="credential-item">
+                  <div>
+                    <strong>On the Spot Award, TCS</strong>
+                    <span>Date pending</span>
+                  </div>
+                  <span class="credential-link pending">Link pending</span>
+                </div>
+                <div class="credential-item">
+                  <div>
+                    <strong>Certificate of Appreciation, TCS</strong>
+                    <span>Date pending</span>
+                  </div>
+                  <span class="credential-link pending">Link pending</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" class="section skills-section" aria-labelledby="skills-title">
+          <div class="section-heading">
+            <p class="section-kicker">Skills</p>
+            <h2 id="skills-title">Tools I use, and the stack I am growing into.</h2>
+          </div>
+
+          <div class="skill-grid">
+            <div class="skill-card">
+              <h3>Cloud</h3>
+              <p>AWS, Oracle Cloud</p>
+            </div>
+            <div class="skill-card">
+              <h3>DevOps</h3>
+              <p>Docker, GitHub Actions, Terraform, Kubernetes fundamentals</p>
+            </div>
+            <div class="skill-card">
+              <h3>Programming</h3>
+              <p>Angular, Python, JavaScript, HTML, CSS, SQL</p>
+            </div>
+            <div class="skill-card">
+              <h3>Systems & Tools</h3>
+              <p>Linux, Windows, Git, GitHub, Jira, Confluence, VS Code</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="contact-section" aria-labelledby="contact-title">
+          <div>
+            <p class="section-kicker">Contact</p>
+            <h2 id="contact-title">Open to cloud, DevOps, and platform-focused conversations.</h2>
+          </div>
+          <div class="contact-actions">
+            <button class="button primary" type="button" data-copy-email>
+              <span aria-hidden="true">@</span>
+              Copy Email
+            </button>
+            <a class="button" href="mailto:aryan1311002@gmail.com">
+              <span aria-hidden="true">@</span>
+              Send Mail
+            </a>
+            <a class="button disabled" href="#" aria-disabled="true">
+              <span aria-hidden="true">CV</span>
+              Resume soon
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
-
