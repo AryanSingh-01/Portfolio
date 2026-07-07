@@ -1,92 +1,38 @@
-// =========================
-// Portfolio Navigation Logic
-// =========================
+const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
+const sections = navLinks
+  .map((link) => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
 
-console.log("Portfolio JS loaded");
+const setActiveLink = () => {
+  const currentSection = sections.reduce((current, section) => {
+    return section.getBoundingClientRect().top <= 140 ? section : current;
+  }, null);
 
-(function () {
-  const navLinks = document.querySelectorAll('.nav-link');
-  const panels = document.querySelectorAll('.panel');
-  const mainContent = document.getElementById('main-content');
-
-  if (!navLinks.length || !panels.length || !mainContent) {
-    console.warn('Required elements missing');
-    return;
-  }
-
-  function openPanel(id, pushState = true) {
-    // Hide all panels
-    panels.forEach(panel => {
-      panel.classList.remove('active');
-    });
-
-    // Deactivate all nav links
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      link.removeAttribute('aria-current');
-    });
-
-    // Activate selected panel
-    const panel = document.getElementById(id);
-    if (!panel) return;
-
-    panel.classList.add('active');
-
-    // Activate corresponding nav links (desktop + mobile)
-    navLinks.forEach(link => {
-      if (link.dataset.target === id) {
-        link.classList.add('active');
-        link.setAttribute('aria-current', 'page');
-      }
-    });
-
-    // Update URL hash
-    if (pushState) {
-      history.replaceState(null, '', `#${id}`);
-    }
-
-    // Accessibility: move focus to main content
-    mainContent.focus({ preventScroll: true });
-  }
-
-  // Handle nav link clicks
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = link.dataset.target;
-      if (target) {
-        openPanel(target, true);
-      }
-    });
-
-    // Keyboard accessibility (Enter / Space)
-    link.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        link.click();
-      }
-    });
+  navLinks.forEach((link) => {
+    link.classList.toggle(
+      "active",
+      currentSection && link.getAttribute("href") === `#${currentSection.id}`
+    );
   });
+};
 
-  // Initialize from URL hash
-  function initFromHash() {
-    const hash = location.hash.replace('#', '');
-    const initialPanel =
-      hash && document.getElementById(hash)
-        ? hash
-        : 'home';
+window.addEventListener("scroll", setActiveLink, { passive: true });
+setActiveLink();
 
-    openPanel(initialPanel, false);
+const copyButton = document.querySelector("[data-copy-email]");
+
+copyButton?.addEventListener("click", async () => {
+  const email = "aryan1311002@gmail.com";
+  const originalText = copyButton.textContent;
+
+  try {
+    await navigator.clipboard.writeText(email);
+    copyButton.textContent = "Copied";
+  } catch {
+    copyButton.textContent = email;
   }
 
-  // Handle back / forward navigation
-  window.addEventListener('hashchange', () => {
-    const hash = location.hash.replace('#', '');
-    if (hash && document.getElementById(hash)) {
-      openPanel(hash, false);
-    }
-  });
-
-  // Init
-  initFromHash();
-})();
+  window.setTimeout(() => {
+    copyButton.textContent = originalText;
+  }, 1800);
+});
