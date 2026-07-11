@@ -589,7 +589,7 @@ h3 {
 @media (max-width: 880px) {
   
     .site-shell {
-    width: 100%;
+    width: 100vh;
     padding: 0 14px;
     box-sizing: border-box;
 }
