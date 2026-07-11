@@ -637,7 +637,15 @@ h3 {
   body {
     background-size: 980px auto;
   }
+  .brand-mark{
+    display: none;
+  }
+  .title{
+    font-size: clamp(2.8rem, 7vw, 3.4rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
 
+  }
   .topbar {
     flex-direction: column;
   }
